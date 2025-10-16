@@ -9,6 +9,22 @@
 &mt { quick-tap-ms = <200>; };
 
 / {
+    macros {
+        go_assign: go_assign {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp EQUAL>;
+            label = "GO_ASSIGN";
+        };
+
+        go_notequal: go_notequal {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EXCL &kp EQUAL>;
+            label = "GO_NOTEQUAL";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -39,9 +55,9 @@
 
         sym {
             bindings = <
-&kp RIGHT_PARENTHESIS  &kp CARET  &kp AT        &kp DOLLAR       &kp RIGHT_BRACKET  &kp PRCNT                    &kp AMPS   &kp LBKT              &kp ASTERISK    &kp QUESTION  &kp DOLLAR  &kp LEFT_PARENTHESIS
-&mt LCTRL PLUS         &kp EXCL   &kp HASH      &kp RIGHT_BRACE  &kp RPAR           &kp EQUAL                    &kp COLON  &kp LEFT_PARENTHESIS  &kp LEFT_BRACE  &kp SLASH     &kp PIPE    &mt RCTRL MINUS
-&mt LEFT_ALT EQUAL     &kp N1     &kp NUMBER_2  &kp N3           &kp N4             &kp N5     &trans    &trans  &kp N6     &kp N7                &kp N8          &kp N9        &kp N0      &kp RALT
+&kp RIGHT_PARENTHESIS  &kp CARET  &kp AT        &kp DOLLAR       &kp RIGHT_BRACKET  &kp PRCNT                    &kp AMPS   &kp LBKT    &kp ASTERISK    &kp QUESTION  &kp DOLLAR  &kp LEFT_PARENTHESIS
+&mt LCTRL PLUS         &kp EXCL   &kp HASH      &kp RIGHT_BRACE  &go_notequal       &kp EQUAL                    &kp COLON  &go_assign  &kp LEFT_BRACE  &kp SLASH     &kp PIPE    &mt RCTRL MINUS
+&mt LEFT_ALT EQUAL     &kp N1     &kp NUMBER_2  &kp N3           &kp N4             &kp N5     &trans    &trans  &kp N6     &kp N7      &kp N8          &kp N9        &kp N0      &kp RALT
                                                                  &trans             &trans     &trans    &trans  &trans     &trans
             >;
 
