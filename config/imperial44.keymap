@@ -23,6 +23,22 @@
             bindings = <&kp EXCL &kp EQUAL>;
             label = "GO_NOTEQUAL";
         };
+
+        enru_change: enru_change {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_WIN &kp SPACE>;
+            label = "ENRU_CHANGE";
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        switch_lang {
+            bindings = <&enru_change>;
+            key-positions = <0 11>;
+        };
     };
 
     keymap {
