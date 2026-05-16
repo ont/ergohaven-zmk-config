@@ -86,10 +86,10 @@
 
         wm {
             bindings = <
-&kp LG(V)  &trans      &trans      &trans         &kp LG(D)          &kp LG(F)                                      &trans     &kp LG(LEFT_BRACKET)  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp LG(Q)
-&kp LG(W)  &kp LG(N1)  &kp LG(N2)  &kp LG(PG_UP)  &kp LG(PAGE_DOWN)  &kp LG(R)                                      &kp LG(H)  &kp LG(J)             &kp LG(K)             &kp LG(L)              &trans                 &trans
-&trans     &kp LG(Z)   &trans      &trans         &trans             &trans                    &trans       &trans  &trans     &trans                &trans                &trans                 &kp LG(LS(FSLH))       &trans
-                                                  &kp LG(O)          &mt LEFT_SHIFT LG(SPACE)  &kp LG(T)    &trans  &trans     &trans
+&kp LG(V)  &trans      &trans      &trans         &kp LG(D)          &kp LG(F)                                        &trans     &kp LG(LEFT_BRACKET)  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp LG(Q)
+&kp LG(W)  &kp LG(N1)  &kp LG(N2)  &kp LG(PG_UP)  &kp LG(PAGE_DOWN)  &kp LG(R)                                        &kp LG(H)  &kp LG(J)             &kp LG(K)             &kp LG(L)              &trans                 &trans
+&trans     &kp LG(Z)   &trans      &trans         &trans             &trans                      &trans       &trans  &trans     &trans                &trans                &trans                 &kp LG(LS(FSLH))       &trans
+                                                  &kp LG(O)          &mt LEFT_SHIFT LG(LC(TAB))  &kp LG(T)    &trans  &trans     &trans
             >;
         };
     };
